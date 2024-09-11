@@ -17,4 +17,14 @@ Host draw-analysis.com
   IdentityFile /root/.ssh/draw-analysis
 ```
 
-测试连接 `ssh -T git@draw-analysis.com`
+测试连接 `ssh -T git@draw-analysis.com`，成功后可以正常连接 git 了
+
+```
+cd <project>
+git init
+git add .
+git commit -m "first commit"
+git branch -b <your-name>
+git remote add origin git@draw-analysis.com:yanglebupt/draw-analysis.git
+git push origin <your-name>
+```
