@@ -17,14 +17,31 @@ Host draw-analysis.com
   IdentityFile /root/.ssh/draw-analysis
 ```
 
-测试连接 `ssh -T git@draw-analysis.com`，成功后可以正常连接 git 了
+测试连接 `ssh -T git@draw-analysis.com`，成功后可以正常连接 git 了，在 `.gitignore` 中注意不要上传数据集、保存的模型、暂存文件等
 
+```.gitignore
+绘画分类数据集/**
+results/**
+dataset/**
+**/.ipynb_checkpoints
+**/.pytest_cache
+**/__pycache__
 ```
+
+配置 git 信息
+
+```shell
 cd <project>
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
+开始上传，注意每个人新建一个分支上传，可以以自己的名字命名分支名字 `git checkout -b <your-name>`
+
+```shell
 git init
 git add .
-git commit -m "first commit"
-git branch -b <your-name>
+git commit -m <COMMIT-MESSAGE>
 git remote add origin git@draw-analysis.com:yanglebupt/draw-analysis.git
 git push origin <your-name>
 ```
