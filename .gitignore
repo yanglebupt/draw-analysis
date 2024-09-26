@@ -1,0 +1,6 @@
+绘画分类数据集/**
+results/**
+dataset/**
+**/.ipynb_checkpoints
+**/.pytest_cache
+**/__pycache__
