@@ -1,0 +1,8 @@
+pandas 
+scikit-learn
+openpyxl
+opencv-python
+matplotlib 
+huggingface-hub
+transformers
+peft
